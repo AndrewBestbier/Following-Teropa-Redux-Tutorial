@@ -36,7 +36,7 @@ export function setEntries(state, entries) {
 */
 
 function getWinners(vote) {
-  //Error checking
+  //If no votes exist yet
   if (!vote) {
     return [];
   }
@@ -81,6 +81,9 @@ Using updateIn makes this pleasingly succinct. What the code expresses is
 and apply this function there. If there are keys missing along the path,
 create new Maps in their place. If the value at the end is missing, initialize it with 0".
 */
-export function vote(state, entry) {
-  return state.updateIn(['vote', 'talley', entry], 0, talley => talley + 1)
+export function vote(voteState, entry) {
+  return voteState.updateIn(['talley', entry], 0, talley => talley + 1)
 }
+
+//The Initial state of the application
+export const INITIAL_STATE = Map();
