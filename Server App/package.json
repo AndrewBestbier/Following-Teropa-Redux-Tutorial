@@ -4,6 +4,7 @@
   "description": "Following the instructions at http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html, step by step to learn TDD and Redux",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node index.js",
     "test": "mocha --compilers js:babel/register --require ./test/test_helper.js  --recursive",
     "test:watch": "npm run test -- --watch"
   },
@@ -22,6 +23,8 @@
     "chai-immutable": "^1.3.0"
   },
   "dependencies": {
-    "immutable": "^3.7.5"
+    "immutable": "^3.7.5",
+    "redux": "^3.0.4",
+    "socket.io": "^1.3.7"
   }
 }
