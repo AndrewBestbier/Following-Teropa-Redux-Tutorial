@@ -23,7 +23,7 @@ describe('reducer', () => {
       entries: ['A', 'B']
     }))
   })
-  
+
   it('can be used with reduce', () => {
     const actions = [{
       type: 'SET_ENTRIES',
@@ -104,7 +104,7 @@ describe('reducer', () => {
     expect(nextState).to.equal(fromJS({
       vote: {
         pair: ['A', 'B'],
-        talley: {
+        tally: {
           "B": 1
         }
       },
